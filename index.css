@@ -1,0 +1,156 @@
+html,
+body {
+  height: 100%;
+}
+
+#page-content {
+  flex: 1 0 auto;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+#search-module {
+  flex: 0.6 0.5 auto;
+}
+
+#sticky-footer {
+  flex-shrink: none;
+  color: lightgray;
+}
+#link{
+  color: orange;
+}
+#link:hover{
+  text-decoration: none;
+}
+#body{
+  background: transparent;
+  background-image: url("background-3.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  text-align: center;
+}
+#image-message{
+  display: none;
+}
+#revert{
+  display: none;
+}
+#finish{
+  display: none;
+}
+
+
+#bookmark{
+  color: white;
+  height: 40px;
+  width: 40px;
+  border-radius: 180px;
+  background: white;
+
+}
+#bookmark-icon{
+  height: 24px;
+  width: 24px;
+}
+
+#bookmark-body{
+  padding-bottom: 30px;
+
+}
+#bookmark-title{
+  color: #333;
+  text-decoration: none !important;
+  margin-top: 15px;
+  background: white;
+  border-radius: 10px;
+  width: 70%;
+  transition: 0.5s;
+}
+#bookmark-title:hover{
+  color: white;
+  background: #333;
+}
+a:hover{
+  text-decoration: none !important;
+}
+#bookmark-module{
+  padding-top: 50px;
+}
+.overlay{
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.gap{
+  height: 200px;
+}
+
+form {
+  text-align: center;
+}
+#material-search{
+  padding: 0px 0px 0px 10px;
+  font-size: 44px;
+  border-right: 1px solid #dfe1e5;
+  background-color: #dfe1e5;
+  color: white;
+  border-bottom-left-radius: 24px;
+  border-top-left-radius: 24px;
+
+}
+
+.btn-primary{
+  background-color: orange !important;
+  border: 1px solid orange !important;
+}
+.input {
+  background-color: transparent;
+  border: none;
+  margin: 0;
+  padding: 2px 15px;
+  color: rgba(0,0,0,.87);
+  word-wrap: break-word;
+  outline: none;
+  display: flex;
+  flex: 100%;
+  -webkit-tap-highlight-color: transparent;
+  height: 100%;
+  font-size: 24px !important;
+}
+.input:active{
+    border: 0px solid;
+}
+.input:hover{
+    border: 0px solid;
+}
+.searchbox {
+  width: 100% !important;
+  background: #fff;
+  display: flex;
+  border: 0px solid #dfe1e5;
+  box-shadow: none;
+  border-radius: 24px;
+  z-index: 3;
+  height: 44px;
+  margin: 0 auto;
+  border-color: rgba(223,225,229,0);
+  box-shadow: 0 1px 6px rgba(32,33,36,.28);
+}
+.footer-link {
+  color: orange;
+  padding-right: 10px;
+}
+.footer-link:hover {
+  color: rgb(221, 145, 3);
+}
+.policies{
+  text-align: right;
+}
+.upload{
+  text-align: left;
+  padding-left: 10px !important;
+}
+.row{
+  margin-left: 0px !important;
+  margin-right: 0px !important;
+}

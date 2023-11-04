@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Metadata -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adviist | Search </title>
+
+    <!-- General Scripts -->
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+
+    <!-- Custom Scripts -->
+    <link rel="stylesheet" href="search.css">
+</head>
+
+<body>
+    <!-- Header with Search Bar and Branding -->
+    <div id="header">
+        <div class="search">
+            <input type="text" id="search-input" class="searchTerm" placeholder="Search">
+            <button onclick="newQuery()" type="submit" class="searchButton">
+                <i class="material-icons">search</i>
+            </button>
+        </div>
+        <div class="branding"></div>
+    </div>
+
+    <!-- Content with Ads and Results -->
+    <div id="content">
+        <div id="ad-results"></div>
+        <div id="results"></div>
+    </div>
+        
+    <!-- Footer with Pagination and Legal -->
+    <div id="footer">
+        <div id="pagination">
+            <a id="page-1" class="active" onclick="activatePage(1)">1</a>
+            <a id="page-2" onclick="activatePage(2)">2</a>
+            <a id="page-3" onclick="activatePage(3)">3</a>
+            <a id="page-4" onclick="activatePage(4)">4</a>
+            <a id="page-5" onclick="activatePage(5)">5</a>
+        </div>
+        <div id="legal">
+            <p>© 2023 Adviist. All rights reserved.</p>
+            <a href="../privacy.html" class="footer-link">Privacy Policy</a>
+            <a href="../terms.html" class="footer-link">Terms of Use</a>
+            <a href="../contact.html" class="footer-link">Contact Us</a>
+            <a href="../about.html" class="footer-link">About Us</a>
+        </div>
+    </div>
+
+    <!-- Custom Scripts -->
+    <script src="search.js"></script>
+    </body>
+</html>
