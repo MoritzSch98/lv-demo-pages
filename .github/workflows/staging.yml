@@ -4,16 +4,17 @@ on:
       - staging
 name: 🚀 Deploy website on push
 jobs:
-  web-deploy:
+  deploy:
     name: 🎉 Deploy
     runs-on: ubuntu-latest
     steps:
     - name: 🚚 Get latest code
       uses: actions/checkout@v3
     
-    - name: 📂 Sync files
-      uses: SamKirkland/FTP-Deploy-Action@v4.3.4
+    - name: 📂 Sync files using SSH
+      uses: appleboy/ssh-action@master
       with:
-        server: 52.202.166.201
-        username: ${{ secrets.ftp_username }}
-        password: ${{ secrets.ftp_password }}
+        host: ${{secrets.HOST}}
+        username: ${{secrets.SSH_USER}}
+        key: ${{secrets.SSH_PRIVATE_KEY}}
+        port: ${{secrets.PORT}}
