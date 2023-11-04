@@ -18,3 +18,8 @@ jobs:
         username: ${{secrets.SSH_USER}}
         key: ${{secrets.SSH_PRIVATE_KEY}}
         port: ${{secrets.PORT}}
+        script: |
+          cd /var/www/
+          nmkdir adviist
+
+        
