@@ -6,6 +6,23 @@ document.getElementById('link').addEventListener("click", function(){
   resetButtons();
 });
 
+document.getElementById('material-search').addEventListener('click', function() {
+ // document.getElementById('search-input').focus();
+ const query = document.getElementById('search-input').value;
+ console.log("test");
+ if (query) {
+  // Die Suchanfrage wird an die URL angehängt, und der Benutzer wird weitergeleitet.
+  window.location.href = `./search?q=${encodeURIComponent(query)}`;
+  }else{
+    document.getElementById('material-search').classList.add('shake');
+        setTimeout(() => {
+            document.getElementById('material-search').classList.remove('shake');
+        }, 400); // Entfernt die "shake" Klasse nach 400 Millisekunden (Dauer der Animation)
+        document.getElementById('search-input').focus();
+  } 
+
+})
+
 document.getElementById('revert').addEventListener("click", function(){
   chrome.storage.sync.get('oldbg', function(data){
     var old = data.oldbg;
@@ -15,6 +32,18 @@ document.getElementById('revert').addEventListener("click", function(){
           setBackground();
           document.getElementById('image-message').style.display = 'none';
           toggleButtons();
+    });
+  });
+});
+document.getElementById('reset').addEventListener("click", function(){
+  chrome.storage.sync.get('oldbg', function(data){
+    var old = data.oldbg;
+    chrome.storage.sync.set({bgimage: old}, function() {
+          console.log("The old background was recovered");
+          document.getElementById('url-input').value = "";
+          setBackground();
+          document.getElementById('image-message').style.display = 'none';
+        //  toggleButtons();
     });
   });
 });
@@ -182,3 +211,5 @@ function getFavicon(url){
 
   return favicon;
 }
+
+;

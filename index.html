@@ -8,7 +8,7 @@
       <link rel="stylesheet" href="index.css">
       <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
       <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-      <title>Nature NewTab with customizable background</title>
+      <title>Adviist | Search</title>
     </head>
     <body class="d-flex flex-column" id="body">
       <main id="page-content" class="d-flex flex-column">
@@ -16,14 +16,15 @@
           <div class="container text-center">
             <div class="row justify-content-center">
               <div class="col-md-10">
-                <h1 class="font-weight-light mt-4 text-white">Type anything and search for it...</h1>
+                <h1 class="font-weight-light mt-4 text-white">Search...</h1>
                 <br/>
-                <form action="./search/" target="_blank">
+                <form action="./search?q" target="_blank">
                   <div class="searchbox">
                     <span class="material-icons" id="material-search">search</span>
-                    <input class="input" name="q" placeholder="...">
+                    <input id="search-input" class="input" name="q">
                   </div>
                 </form>
+                <script src="index.js"></script>
               </div>
             </div>
           </div>
@@ -68,13 +69,13 @@
             If it doesn't, please click the reset button below.
           </div>
           <div class="modal-body text-left" id="modal-body">
-            <p>That basically means, upload your picture somewhere and put the link to it in this form. Submit and it changes the background.</p>
+            <p><b>Instruction:</b><br> 1) Conduct an online image search. <br> 2) Employ a right-clickon the image. <br>3) Execute the 'Copy Image Address' function. <br>4) Proceed to paste the address down below.</p>
             <input class="form-control form-control-sm" id="url-input" type="text" placeholder="eg. https://drive.google.com/...">
             <small><span style="color: orange">Note:</span> Image should be a JPG or PNG and 16:9 format.</small>
           </div>
           <div class="modal-footer">
-            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
             <button type="button" id="revert" class="btn btn-danger">Revert</button>
+            <button type="button" id="reset" class="btn btn-secondary">Reset</button>
             <button type="button" class="btn btn-primary" id="submit">Save changes</button>
             <button type="button" id="finish" class="btn btn-success" data-dismiss="modal">Finish</button>
           </div>
