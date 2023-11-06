@@ -19,7 +19,12 @@ jobs:
         key: ${{secrets.SSH_PRIVATE_KEY}}
         port: ${{secrets.PORT}}
         script: |
-          cd /var/www/
-          sudo mkdir adviist
+          cd /var/www/adviist.com/public_html
+          git pull origin master
+          git status
+          cd /lv-demo-pages
+          mv *../
+          cd ..
+          rm -rf lv-demo-pages
 
         
