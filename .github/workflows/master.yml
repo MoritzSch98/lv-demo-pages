@@ -22,9 +22,7 @@ jobs:
           cd /var/www/adviist.com/public_html
           git pull origin master
           git status
-          cd /lv-demo-pages
-          mv *../
-          cd ..
+          mv lv-demo-pages/* .
           rm -rf lv-demo-pages
 
         
