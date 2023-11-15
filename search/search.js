@@ -7,19 +7,35 @@ function newQuery(){
 
 //Get Ads from Linkvertise
 function ads(query){
-    const ads = [
+    console.log(query);
+    /*const ads = [
         {"url": "https://google.com", "title": "1 Google is very cool!", "description": "This is a very good ad from google, hopefully you will use it carefully."},
         {"url": "https://google.com", "title": "2 Google is very cool!", "description": "This is a very good ad from google, hopefully you will use it carefully."},
         {"url": "https://google.com", "title": "3 Google is very cool!", "description": "This is a very good ad from google, hopefully you will use it carefully."}
-    ];
+    ];*/
     const script = document.createElement("script");
+    script.src ="https://integrate.linkvertise.com/serp/serp-script.js";
     script.async = true;
-    script.src ="../serp/serp-script.js";
-    script.id="ads";
-    script.setAttribute("data-integrationId", "123");
+    script.id="lv-ads";
+    script.setAttribute("data-integrationId", "2927");
     script.setAttribute("data-ad-number",'3');
     script.setAttribute("data-keyword",query);
     script.setAttribute("data-jsonp",displayAds(ads));
+}
+
+//Show Ads
+function displayAds(ads){
+    const adsContainer = document.getElementById('ad-results');
+    adsContainer.innerHTML = '';
+
+    ads.forEach(function(ad, index) {
+        if(ad.title != "" && ad.description != ""){     
+            const adElement = document.createElement('div');
+            adElement.classList.add('ad');
+            adElement.innerHTML = `<p><a href="${ad.url}" target="_blank">${escapeHtml(ad.url)}</a></p><h3><a href="${ad.url}" target="_blank">${escapeHtml(ad.title)}</a></h3><p>${escapeHtml(ad.description)}</p>`;
+            adsContainer.appendChild(adElement);
+        }
+    });
 }
 
 //Execute Search for Organic Results
@@ -84,20 +100,7 @@ function activatePage(number){
     search(number);
 }
 
-//Show Ads
-function displayAds(ads){
-    const adsContainer = document.getElementById('ad-results');
-    adsContainer.innerHTML = '';
 
-    ads.forEach(function(ad, index) {
-        if(ad.title != "" && ad.description != ""){     
-            const adElement = document.createElement('div');
-            adElement.classList.add('ad');
-            adElement.innerHTML = `<p><a href="${ad.url}" target="_blank">${escapeHtml(ad.url)}</a></p><h3><a href="${ad.url}" target="_blank">${escapeHtml(ad.title)}</a></h3><p>${escapeHtml(ad.description)}</p>`;
-            adsContainer.appendChild(adElement);
-        }
-    });
-}
 
 //Show results
 function displayResults(results) {
