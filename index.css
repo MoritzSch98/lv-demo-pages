@@ -8,6 +8,7 @@ body {
   background-color: rgba(0, 0, 0, 0.5);
 }
 
+
 #search-module {
   flex: 0.6 0.5 auto;
 }
@@ -24,7 +25,7 @@ body {
 }
 #body{
   background: transparent;
-  background-image: url("background-3.jpg");
+  background-image: url("./images/wallpaper/background-3.jpg");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -96,8 +97,31 @@ form {
   color: white;
   border-bottom-left-radius: 24px;
   border-top-left-radius: 24px;
+  transition: transform 0.2s ease; /* Ãœbergangseffekt fÃ¼r das SchÃ¼tteln */
 
 }
+#material-search:hover{
+  cursor: pointer;
+  cursor: url('klick-cursor.png'), pointer;
+
+}
+
+#material-search.shake {
+  animation: shake 0.4s ease infinite; /* CSS-Animation fÃ¼r das SchÃ¼tteln */
+}
+
+@keyframes shake {
+  0%, 100% {
+      transform: translateX(0);
+  }
+  20%, 40%, 60%, 80% {
+      transform: translateX(-5px); /* SchÃ¼tteln nach links */
+  }
+  30%, 50%, 70% {
+      transform: translateX(5px); /* SchÃ¼tteln nach rechts */
+  }
+}
+
 
 .btn-primary{
   background-color: orange !important;
