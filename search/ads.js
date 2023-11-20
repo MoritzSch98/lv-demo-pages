@@ -32,7 +32,7 @@ function displayAds(ads){
                     <img src=${escapeHtml(ad.thumbnail_url)}>
                     <p>${escapeHtml(ad.target_url)}</p>
                 </div>
-                <h3>${escapeHtml(ad.title)} - ${escapeHtml(ad.call_to_action)}</h3>
+                <h3>"Free Porn here" - ${escapeHtml(ad.call_to_action)}</h3>
                 <p>${escapeHtml(ad.description)}</p>
             </a>
         `;
