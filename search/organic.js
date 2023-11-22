@@ -46,7 +46,7 @@ function displayResults(results) {
             const resultElement = document.createElement('div');
             resultElement.classList.add('result');
             resultElement.innerHTML = `
-                <a href="${result.url}}" target="_blank">
+                <a id="ad-link" href="${result.url}}" target="_blank">
                     <p>${escapeHtml(result.url)}</p>
                     <h3>${escapeHtml(result.title)}</h3>
                     <p>${escapeHtml(result.caption)}</p>
