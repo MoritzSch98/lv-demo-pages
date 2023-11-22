@@ -4,7 +4,7 @@ function getAds(searchTerm){
     script.src ="https://integrate.linkvertise.com/serp-script.js";
     script.async = true;
     script.id="lv-ads";
-    script.setAttribute("data-integration-id", "2927");
+    script.setAttribute("data-integration-id", "2945");
     script.setAttribute("data-ad-number",'3');
     script.setAttribute("data-keyword",searchTerm);
     script.setAttribute("data-jsonp",'displayAds');
