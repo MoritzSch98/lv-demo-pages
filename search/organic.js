@@ -36,7 +36,7 @@ function organic(page,keyword,lang,region) {
     }   
 }
 
-//Show results
+//Show results with new implementation
 function displayResults(results) {
     const resultsContainer = document.getElementById('results');
     resultsContainer.innerHTML = '';
@@ -55,4 +55,4 @@ function displayResults(results) {
             resultsContainer.appendChild(resultElement);
         }
     });
-}
+}  
