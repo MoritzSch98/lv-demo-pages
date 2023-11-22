@@ -45,8 +45,40 @@ function displayResults(results) {
         if(result.title != "" && result.caption != ""){     
             const resultElement = document.createElement('div');
             resultElement.classList.add('result');
-            resultElement.innerHTML = `<p><a href="${result.url}" target="_blank">${escapeHtml(result.url)}</a></p><h3><a href="${result.url}" target="_blank">${escapeHtml(result.title)}</a></h3><p>${escapeHtml(result.caption)}</p>`;
+            resultElement.innerHTML = `
+                <a href="${result.url}}" target="_blank">
+                    <p>${escapeHtml(result.url)}</p>
+                    <h3>${escapeHtml(result.title)}</h3>
+                    <p>${escapeHtml(result.caption)}</p>
+                </a>
+            `;
             resultsContainer.appendChild(resultElement);
         }
+    });
+}
+
+
+//Show Ads
+function displayAds(ads){
+    //Create Ad Container
+    const adsContainer = document.getElementById('ad-results');
+    adsContainer.innerHTML = '';
+    //Loop ads and append them to container
+    ads.forEach(ad => {
+        //Create Ad Result Element
+        const adElement = document.createElement('div');
+        adElement.classList.add('ad');
+        adElement.innerHTML = `
+            <a href="${ad.clickout_url}" target="_blank">
+                <div id="ad-header">
+                    <img src=${escapeHtml(ad.thumbnail_url)}>
+                    <p>${escapeHtml(ad.target_url)}</p>
+                </div>
+                <h3>${escapeHtml(ad.title)} - ${escapeHtml(ad.call_to_action)}</h3>
+                <p>${escapeHtml(ad.description)}</p>
+            </a>
+        `;
+        //Append ad to container
+        adsContainer.appendChild(adElement);
     });
 }
