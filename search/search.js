@@ -33,8 +33,8 @@ function getResults(){
 
     //Define things for calling results
     var page = 1;
-    var lang = navigator.language.split("-")[0];
-    var region = navigator.language.split('-')[1].toLocaleLowerCase();
+    var lang = "en";
+    var region = "us"
     var keyword = searchTerm;
 
     //Functions to load results. Organic and Ad Results
