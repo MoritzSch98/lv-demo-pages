@@ -32,13 +32,11 @@ function getResults(){
     input.value = searchTerm;
 
     //Define things for calling results
-    var page = 1;
-    var lang = "en";
-    var region = "us"
-    var keyword = searchTerm;
+    var q = searchTerm;
+    var limit = 10;
 
     //Functions to load results. Organic and Ad Results
-    organic(page, keyword, lang, region);
+    organic(q, limit);
     getAds(searchTerm); 
 }
 

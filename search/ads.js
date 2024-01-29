@@ -20,10 +20,20 @@ function displayAds(ads){
         //Create Ad Result Element
         const adElement = document.createElement('div');
         adElement.classList.add('ad');
-        adElement.innerHTML = `
+       /* adElement.innerHTML = `
             <a href="${ad.clickout_url}" target="_blank">
                 <div id="ad-header">
                     <img src=${escapeHtml(ad.thumbnail_url)}>
+                    <p>${escapeHtml(ad.target_url)}</p>
+                </div>
+                <h3>${escapeHtml(ad.title)} - ${escapeHtml(ad.call_to_action)}</h3>
+                <p>${escapeHtml(ad.description)}</p>
+            </a>
+        `;*/
+        adElement.innerHTML = `
+            <a href="${ad.clickout_url}" target="_blank">
+                <div id="ad-header">
+                    <p id="ad-icon">Ad</p>
                     <p>${escapeHtml(ad.target_url)}</p>
                 </div>
                 <h3>${escapeHtml(ad.title)} - ${escapeHtml(ad.call_to_action)}</h3>

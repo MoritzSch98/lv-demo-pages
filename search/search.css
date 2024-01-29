@@ -90,7 +90,7 @@ p > a {
 
 
 #ad-results {
-    margin: 20px;
+    margin: 0px 20px;
 
 }
 .ad {
@@ -112,8 +112,15 @@ p > a {
 #ad-header > img{
     height: 3rem;
 }
+#ad-header > #ad-icon{
+    flex: 0.025;
+    margin-left: 0px;
+    border: 1px solid black;
+    border-radius: 5px;
+    text-align: center;
+}
 #ad-header > p{
-    flex: 0.9;
+    flex: 0.975;
     margin-left: 0.5rem;
     align-self: center;
 }
@@ -132,7 +139,7 @@ p > a {
 
 
 #results {
-    margin: 20px;
+    margin: 0px 20px;
 
 }
 .result {
